@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .highlight-line {
+            display: inline-block;
+            position: relative;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0a2f58; /* Text color */
+            line-height: 1.5;
+            padding-bottom: 5px;
+        }
+
+        .highlight-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 0.3em; /* Height of the highlight */
+            background-color: #a8e6ff; /* Highlight color */
+            z-index: -1;
+            transition: width 0.3s ease, background-color 0.3s ease;
+            width: 0; /* Initial width */
+        }
+
+        .highlight-line:hover::before {
+            width: 100%; /* Full width on hover */
+        }
+    </style>
+    <title>Line Highlight Effect</title>
+</head>
+<body>
+    <div>
+        <span class="highlight-line">Animals that captivate</span><br>
+        <span class="highlight-line">people with their</span><br>
+        <span class="highlight-line">intelligence</span>
+    </div>
+</body>
+</html>
